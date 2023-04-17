@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabelas Responsivas</title>
+    <style>
+        body{
+            font-size: arial, helvetica, sans-serif;
+        }
+        table{
+            width: 500px;
+            border-collapse: collapse;
+            position: relative; <!-- para deixar cabeçalho fixo-->
+        }
+        caption{
+            font-size: 1,5em;
+            font-weight: bold;
+            padding: 10px;
+            background-color: lightblue;
+        }
+        thead > tr > th{     <!-- para cabeçalho fixo-->
+            position: sticky;
+            top: -1px;
+            background-color: lightgray;
+        }
+        td, th{
+            border: 1px solid black;
+            padding: 10px;
+        }
+        thead, tfoot{
+            background-color: gray;
+            color: white;
+        }
+        td.numero{
+            text-align: right;
+        }
+        tbody > tr:nth-child(2n){
+            background-color: lightgray;
+            font-weight: bold;
+        }
+        div.container{
+            overflow-x: auto; <!-- transborda no eixo x o overflow é nos dois eixos e o overflow y para o eixo y-->
+        }
+    </style>
+</head>
+<body>
+    <h1> Tabelas em Telas Pequenas</h1>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repudiandae amet animi, placeat hic maiores atque harum aperiam id earum beatae, voluptates perferendis tempora nihil? Numquam doloribus dolorem ab fugiat veniam!</p>
+    <div id="container"> <!-- Para tornar responsiva é necessário envelopar TODA a tabela em div e dar o id container ver a configuração acima-->
+        <table>
+            <caption>Tabelas Responsivas</caption>
+            <thead>
+                <tr>
+                    <th>Produto</th>
+                    <th>jan </th>
+                    <th>fev</th>
+                    <th>mar</th>
+                    <th>mai</th>
+                    <th>jun</th>
+                    <th>jul</th>
+                    <th>ago</th>
+                    <th>set</th>
+                    <th>out</th>
+                    <th>nov</th>
+                    <th>dez</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Fogão</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+        
+                </tr>
+                <tr>
+                    <td>Computador</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+        
+                </tr>
+                <tr>
+                    <td>TV</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+        
+                </tr>
+                <tr>
+                    <td>Alexa</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+        
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
