@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+</head>
+<body>
+    <h1>Teste de Formulário</h1>
+    <form action="cadastro.php" method="post" autocomplete="on"> <!--Qnd for colocar autocomplete em cada label tem q colocar on no form-->
+        <p><label for="isu">Usuário:</label> <input type="text" name="usuario" id="iusuario" required minlength="8" maxlength="15" size="10" placeholder="nome do usuário" autocomplete="username"> </p>
+        <!--Required torna o campo obrigatório, minlength tamanho mínimo, size qnts carecteres aparecem na caixa, placeholder: dica do que deve ser escrito-->
+        <p>
+            <Label for="isen">Senha</Label>
+            <input type="password" name="sen" id="isen" required minlength="8" maxlength="15" placeholder="Escreva uma senha com no mínimo 8 caracteres." autocomplete="current-password">
+            <!--Autocomplete current password é para senhas em geral, new password para senhas novas-->
+        </p>
+        <p>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">
+        </p>
+    
+    </form>
+    
+</body>
+</html>
