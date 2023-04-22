@@ -1,48 +1,75 @@
 @charset "UTF-8";
 
-/*versão Mobile First*/
+/*Typical device breakpoints
+Pequenas telas: até 600px
+celular: 600px até 768px
+tablet: 768px até 992px
+desktop: 992px até 1200px
+Grandes telas: acima de 1200px
+*/
 
-*{
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 1.3em;
-    margin: 0px;
-    padding: 0px;
-    box-sizing: border-box; /*para incluir a borda no cálculo do tamanho*/
+@media print{
+   *{
+        font-family: 'Courier New', Courier, monospace;
+   }
+    body{
+        background-image: url(../imagens/back-print.jpg); /*Desnecessário pq não aparece*/
+    }
+    main{
+        border: 2px solid black;
+    }
+    main h1{
+        text-shadow: none;
+        color: black;
+    }
+    img#phone {display: none;} 
+    img#tablet {display: none;}
+    img#print {display: block;}
+    img#pc {display: none;}
+    img#tv {display: none;}
+    main::after{
+        content: "Essa impressão foi feita através do site www.andrecabral.com.br";
+        text-decoration: overline; /*linha em cima*/
+    }
 }
 
-html{
-    
-    height: 100vh;
+@media screen and (min-width: 768px) and (max-width: 992px){
+    body{
+        /*Tablet*/
+        background-image: url(../imagens/back-tablet.jpg);
+    }
+    img#phone {display: none;} 
+    img#tablet {display: block;}
+    img#print {display: none;}
+    img#pc {display: none;}
+    img#tv {display: none;}
 }
 
-body{
-    background: black url(../imagens/back-phone.jpg);
-    background-size: cover;
-    background-position: center center;
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+    body{
+        /*desktop*/
+        background-image: url(../imagens/back-pc.jpg);
+    }
+    img#phone {display: none;} 
+    img#tablet {display: none;}
+    img#print {display: none;}
+    img#pc {display: block;}
+    img#tv {display: none;}
 }
 
-main{
-    background-color: rgba(255, 255, 255, 0.842);
-    width: 400px;
-    margin: auto;
-    border-radius: 10px;
-    margin-top: 20px;
-    padding: 10px;
-}
 
-h1{
-    text-align: center;
-    color: white;
-    font-size: 1em;
-    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.479);
-}
 
-img{
-    display: block;
-    margin: auto;
+@media screen and (min-width: 1200px){
+    body{
+        /*Telas grandes*/
+        background-image: url(../imagens/back-tv.jpg);
+    }
+    main{
+        width: 700px;
+    }
+    img#phone {display: none;} 
+    img#tablet {display: none;}
+    img#print {display: none;}
+    img#pc {display: none;}
+    img#tv {display: block;}
 }
-img#phone {display: block;} 
-img#tablet {display: none;}/*Configurações para sumir com os ícones*/
-img#print {display: none;}
-img#pc {display: none;}
-img#tv {display: none;}
