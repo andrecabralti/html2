@@ -1,0 +1,27 @@
+@charset "UTF-8"
+
+/*Estilos para impressora*/
+
+*{
+    margin: 10px;
+    padding: 10px;
+}
+
+html{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.5em;
+    line-height: 1.5em;
+}
+
+menu{
+    display: none; /* faz o menu não aparecer na hora de imprimir*/
+}
+
+article{
+    width: 100%; /*colocar toda a largura da tela na hora de imprimir*/
+}
+
+article::after{
+    /*essa mensagem aparecerá depois do final do artigo*/
+    content: "Esse artigo foi impresso através do site www.andrecabral.com";
+}
